@@ -1,0 +1,225 @@
+h1 {
+  color: #52616b;
+  font-family: "Varela Round", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  padding: 20px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open + Sans);
+
+body {
+  background: #f2f2f2;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  padding-bottom: 20px;
+  padding-left: 40px;
+}
+
+.todays-weather {
+  text-align: left;
+}
+
+.todays-date {
+  text-align: left;
+  font-weight: 900px;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  border-radius: 4px;
+  
+}
+
+.search-form{
+  width:100%;
+}
+
+
+.searchTerm:focus {
+  color: #00b4cc;
+}
+
+
+.border-right {
+  border-color: #52616b;
+  border-width: 4px;
+}
+
+.temperature {
+  text-align: left;
+  color: #52616b;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 900;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.celcius{
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px
+}
+
+.divider{
+  color: #52616b;
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px
+}
+.farenheight{
+  color:
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px
+}
+
+.high-low {
+  text-align: left;
+  font-family: "Varela Round", sans-serif;
+  line-height: 35px;
+  font-weight: bold;
+  color: #52616b;
+}
+.number {
+  font-weight: normal;
+}
+
+.rain {
+  font-family: "Varela Round", sans-serif;
+  line-height: 35px;
+  margin: 40px;
+  text-align: left;
+  color: #52616b;
+  font-weight: bold;
+}
+
+.percent {
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+.wind {
+  font-family: "Varela Round", sans-serif;
+  line-height: 35px;
+  padding-left: 115px;
+  text-align: left;
+  color: #52616b;
+  font-weight: bold;
+}
+
+.wind-speed {
+  font-weight: normal;
+  font-family: "Varela Round", sans-serif;
+  line-height: 35px;
+  color: #52616b;
+  padding-left: 10px;
+}
+
+.hourly {
+  font-family: "Varela Round", sans-serif;
+  line-height: 35px;
+  text-align: left;
+  color: #52616b;
+  font-weight: bold;
+}
+
+.row-padding {
+  padding-left: 20px;
+}
+
+.day-forecast {
+  font-weight: normal;
+  font-family: "Varela Round", sans-serif;
+  line-height: 35px;
+  color: #52616b;
+  text-align: left;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.time {
+  font-weight: normal;
+  font-family: "Varela Round", sans-serif;
+  line-height: 35px;
+  color: #52616b;
+  padding-right: 12px;
+}
+
+.degrees {
+  font-weight: normal;
+  font-family: "Varela Round", sans-serif;
+  line-height: 35px;
+  color: #52616b;
+  padding-right: 25px;
+  font-size: 21px;
+  text-align: center;
+}
+
+.icon {
+  font-weight: normal;
+  font-family: "Varela Round", sans-serif;
+  line-height: 35px;
+  color: #52616b;
+  padding-right: 50px;
+  text-align: center;
+}
+
+.forecast {
+  text-align: left;
+  color: #52616b;
+  font-weight: 900;
+  padding: 20px;
+  font-family: "Varela Round", sans-serif;
+}
+
+.far.fa-sun {
+  font-size: 50px;
+  color: #ffc107;
+  text-align: right;
+}
+
+.fas.fa-sun {
+  position: relative;
+  font-size: 20px;
+  padding-left: 30px;
+  padding-top: 5px;
+  color: #ffc107;
+}
+
+.fas.fa-rainbow {
+  font-size: 50px;
+  color: #ffc107;
+  text-align: right;
+  color: #ab47bc;
+}
+
+.day {
+  line-height: 35px;
+  color: #52616b;
+  font-family: "Varela Round", sans-serif;
+  text-align: right;
+  margin: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  justify-self: end;
+  padding: 10px;
+  position: relative;
+}
+
+.five-day-forecast {
+  line-height: 35px;
+  color: #52616b;
+  font-family: "Varela Round", sans-serif;
+  text-align: right;
+  margin: 20px;
+  font-size: 17px;
+  padding: 10px;
+  position: relative;
+}
+
+.temp {
+  margin-left: 120px;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="src/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@600&family=Nunito:wght@400;800&family=Varela+Round&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/77ea6bf133.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <h1 class="todays-weather">Today's Weather</h1>
+            </div>
+            <div class="col-7">
+                <h1 class="todays-date" id="todays-date"></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="search">
+                    <form class="search-form" id="search-form">
+                        <input type="text" class="searchTerm" placeholder="Change City" autocomplete="off"
+                            id="search-input" />
+                        <input class="search-button" type="submit" value="search" />
+                        <button class="current-location" type="button" id="current-location"> current location </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5 border-right">
+                <h2 class="temperature"><span id="temperature">25°C</span> <a href="#" class="celcius" id="celcius">°C
+                    </a></span><span class="divider">| </span><a href="#" class="farenheight" id="farenheight">°F</a>
+                    <span class="city" id="city">Sydney </span>&nbsp &nbsp <i class="far fa-sun"></i></h2>
+                <div class="row">
+                    <div class="col-4">
+                        <span class="high-low">High: <span class="number">29 </span> Low:
+                            <span class="number">8</span></span>
+                    </div>
+                    <div class="col-8">
+                        <span class="rain">Chance of Rain: <span class="percent">10%</span></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-8">
+                        <span class="wind">Wind:</span>
+                        <span class="wind-speed">55km/h</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="hourly">Hourly</span>
+                    </div>
+                    </span>
+                    <div class="row">
+                        <span class="row-padding"> </span>
+                        <div class="col-2"><span class="day-forecast">Sun</span></div>
+                        <div class="col-2"><span class="day-forecast">Sun</span></div>
+                        <div class="col-2"><span class="day-forecast">Sun</span></div>
+                        <div class="col-2"><span class="day-forecast">Sun</span></div>
+                        <div class="col-2"><span class="day-forecast">Sun</span></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <span class="row-padding"> </span>
+                        <div class="col-2"><span class="time">10:00</span></div>
+                        <div class="col-2"><span class="time">11:00</span></div>
+                        <div class="col-2"><span class="time">12:00</span></div>
+                        <div class="col-2"><span class="time">13:00</span></div>
+                        <div class="col-2"><span class="time">14:00</span></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <span class="row-padding"> </span>
+                        <div class="col-2"><span class="degrees">15°</span></div>
+                        <div class="col-2"><span class="degrees">17°</span></div>
+                        <div class="col-2"><span class="degrees">25°</span></div>
+                        <div class="col-2"><span class="degrees">20°</span></div>
+                        <div class="col-2"><span class="degrees">18°</span></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <span class="row-padding"> </span>
+                        <div class="col-2">
+                            <span class="icon"><i class="fas fa-cloud-sun-rain"></i></span>
+                        </div>
+                        <div class="col-2">
+                            <span class="icon"><i class="fas fa-cloud-sun-rain"></i></span>
+                        </div>
+                        <div class="col-2">
+                            <span class="icon"><i class="fas fa-cloud-sun"></i></span>
+                        </div>
+                        <div class="col-2">
+                            <span class="icon"><i class="fas fa-cloud"></i></span>
+                        </div>
+                        <div class="col-2">
+                            <span class="icon"><i class="fas fa-cloud-sun"></i></span>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 border-left">
+                <h2 class="forecast">5 Day Forecast &nbsp &nbsp <i class="fas fa-rainbow"></i></h2>
+                <br />
+                <div class="row">
+                    <div class="col-3">
+                        <span class="day">Monday:</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="five-day-forecast">17°/19°</span>
+                    </div>
+                    <div class="col-1">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="day">Tuesday:</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="five-day-forecast">23°/25°</span>
+                    </div>
+                    <div class="col-1">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="day">Wednesday:</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="five-day-forecast">23°/25°</span>
+                    </div>
+                    <div class="col-1"><i class="fas fa-sun"></i></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="day">Thursday:</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="five-day-forecast">15°/17°</span>
+                    </div>
+                    <div class="col-1"><i class="fas fa-sun"></i></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="day">Friday:</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="five-day-forecast">20°/23°</span>
+                    </div>
+                    <div class="col-1"><i class="fas fa-sun"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
